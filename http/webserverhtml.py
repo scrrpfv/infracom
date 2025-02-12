@@ -1,12 +1,12 @@
 from socket import socket, AF_INET, SOCK_STREAM
 
-with open('http/index.html', 'r') as f:
+with open('index.html', 'r') as f:
     index_html = f.read()
-with open('http/style.css', 'r') as f:
+with open('style.css', 'r') as f:
     style_css = f.read()
 
 ss = socket(AF_INET, SOCK_STREAM)
-ss.bind(('localhost', 9999))
+ss.bind(('localhost', 11111))
 ss.listen()
 
 while True:
